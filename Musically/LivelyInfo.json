@@ -1,0 +1,16 @@
+{
+  "AppVersion": "2.0.6.0",
+  "Title": "Musically",
+  "Thumbnail": "thumbnail.jpg",
+  "Desc": "A Music Visualizer",
+  "Author": "Folder.Edits",
+  "License": "MIT",
+  "Contact": null,
+  "Type": 1,
+  "FileName": "index.html",
+  "Arguments": "--audio --system-nowplaying",
+  "IsAbsolutePath": false,
+  "Id": null,
+  "Tags": null,
+  "Version": 0
+}

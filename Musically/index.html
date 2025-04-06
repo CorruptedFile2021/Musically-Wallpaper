@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visualizer Page</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+     
+      background-color: #141414;
+      background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+
+
+    }
+
+    .text {
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      z-index: 1;
+    }
+
+    .title {
+      font-size: 40px;
+      text-align: center;
+      margin-bottom: 1px;
+      padding-bottom: 0px;
+      z-index: 1;
+      position: relative;
+    }
+
+    .author {
+      font-size: 25px;
+      text-align: center;
+      margin-top: 1px;
+      z-index: 1;
+      position: relative;
+    }
+
+    .img {
+      border-radius: 25px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 100px; /* this was 20px earlier — we bumped it */
+      z-index: 1;
+      position: relative;
+    }
+
+    #canvas {
+      margin-top: 60px;
+      display: block;
+      width: 100vw;
+      z-index: 1;
+      position: relative;
+    }
+
+    #particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0; /* make sure it's under everything else */
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    opacity: 0.7; /* tweak this for subtlety */
+    background-color: transparent;
+    }
+
+    .title,.author {
+        text-shadow:
+        0 0 5px rgba(255, 255, 255, 0.3),
+        0 0 10px rgba(255, 255, 255, 0.2),
+        0 0 20px rgba(255, 255, 255, 0.2),
+        0 0 40px rgba(255, 0, 255, 0.3), /* 🔮 outer glow color */
+        0 0 80px rgba(255, 0, 255, 0.2),
+        0 0 100px rgba(255, 0, 255, 0.1);
+    }
+
+  </style>
+</head>
+<body>
+  <img
+    class="img"
+    src="https://picsum.photos/300/300"
+    alt=""
+    id="image"
+    width="300"
+    height="300"
+  />
+  <h1 class="title text" id="title">Title</h1>
+  <h6 class="author text" id="author">Author</h6>
+  <canvas id="particles"></canvas>
+  <canvas id="VisCanvas" width="300" height="300"></canvas>
+
+  
+
+  <script src="visualizer.js" charset="utf-8"></script>
+  <script src="particles.js" charset="utf-8"></script>
+
+  <script src="info.js"></script>
+</body>
+</html>
